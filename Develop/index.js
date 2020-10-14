@@ -95,7 +95,7 @@ async function init() {
 	}
 }
 
-// function to get the correct badge
+// function to grab the correct badge for the selected license
 function getBadge(data) {
 	if (data.license === "MIT") {
 		licenseBadge =
