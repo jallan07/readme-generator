@@ -1,5 +1,11 @@
+// Variable declarations and package dependencies/requirements
 const inquirer = require("inquirer");
 const generateMarkdown = require("./utils/generateMarkdown");
+const fs = require("fs");
+const util = require("util");
+
+// Promisify the writeFile function and store it within a variable called "writeFileAsync"
+const writeFileAsync = util.promisify(fs.writeFile);
 
 // array of questions for user
 function promptUser() {
@@ -42,9 +48,6 @@ function promptUser() {
 	]);
 }
 
-// function to write README file
-// function writeToFile(fileName, data) {}
-
 // function to initialize program
 async function init() {
 	try {
@@ -53,7 +56,7 @@ async function init() {
 		// store the dynamically-created markup in a variable called markup
 		const markup = generateMarkdown(data);
 		// write README file using the dynamically-created markup stored in the markup variable
-		await writeToFile("README.md", markup);
+		await writeFileAsync("README.md", markup);
 	} catch (err) {
 		// if an error, log the error to the console
 		console.log(err);
