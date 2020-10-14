@@ -41,7 +41,7 @@ function generateMarkdown(data) {
   
   Distributed under the ${data.license} License.
 
-  ${data.licenseBadge}
+  [![License: ${licenseBadge}
 
   ---
   
