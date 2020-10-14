@@ -25,7 +25,7 @@ function generateMarkdown(data) {
   
   ## **Installation**
   
-  1. Clone the repo: git clone https://github.com/jallan07/readme-generator.git
+  1. Clone the repo: git clone ${data.repository}.git
   
   2. Install NPM packages: ${data.installation}
   
