@@ -25,9 +25,9 @@ function generateMarkdown(data) {
   
   ## **Installation**
   
-  1. Clone the repo: git clone ${data.repository}.git
+  1. Clone the repo: _git clone ${data.repository}.git_
   
-  2. Install NPM packages: ${data.installation}
+  2. Install NPM packages: _${data.installation}_
   
   ---
   
@@ -41,20 +41,19 @@ function generateMarkdown(data) {
   
   Distributed under the ${data.license} License.
 
+  ${data.licenseBadge}
+
   ---
   
   ## **Contributions**
   
-  _Current Contributors:_
-  ${data.contributors}
+  **Current Contributors:**
   
-  Contributions are what make the open source community such an amazing place to be learn, inspire, and create. Any contributions you make are **greatly appreciated**.
+  _${data.contributors}_
   
-  1. Fork the Project
-  2. Create your Feature Branch (git checkout -b feature/AmazingFeature)
-  3. Commit your Changes (git commit -m 'Add some AmazingFeature')
-  4. Push to the Branch (git push origin feature/AmazingFeature)
-  5. Open a Pull Request
+  Contributions are what make the open source community such an amazing place to be learn, inspire, and create. Any contributions you make are greatly appreciated.
+  
+  ${data.contributions}
   
   ---
   

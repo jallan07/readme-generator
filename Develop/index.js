@@ -45,6 +45,26 @@ function promptUser() {
 			message: "What usage information would you like to include?",
 			name: "usage",
 		},
+		{
+			type: "input",
+			message:
+				"What installation instructions should be included in the README?",
+			name: "installation",
+			default: "npm i",
+		},
+		{
+			type: "input",
+			message: "Who should be listed as a contributor on this project?",
+			name: "contributors",
+		},
+		{
+			type: "input",
+			message:
+				"What instructions should be included regarding future contributions to this project?",
+			name: "contributions",
+			default:
+				"\n1. Fork the Project\n2. Create your Feature Branch (git checkout -b feature/AmazingFeature)\n3. Commit your Changes (git commit -m 'Add some AmazingFeature')\n4. Push to the Branch (git push origin feature/AmazingFeature)\n5. Open a Pull Request",
+		},
 	]);
 }
 
