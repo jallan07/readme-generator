@@ -23,7 +23,9 @@ function generateMarkdown(data) {
 			"Artistic-2.0](https://img.shields.io/badge/License-Perl-0298c3.svg)](https://opensource.org/licenses/Artistic-2.0)";
 	}
 
-	return `
+	// Return the following markup to dynamically create the readme file code
+	return (
+		`
   # **${data.title}**
 
   ---
@@ -48,9 +50,16 @@ function generateMarkdown(data) {
   
   ## **Installation**
   
-  1. Clone the repo: _git clone ${data.repository}.git_
-  
-  2. Install NPM packages: _${data.installation}_
+  1. Clone the repo: ` +
+		"```git clone " +
+		data.repository +
+		".git```" +
+		`\n` +
+		`2. Install NPM packages: ` +
+		"```" +
+		data.installation +
+		"```" +
+		`
   
   ---
   
@@ -81,20 +90,40 @@ function generateMarkdown(data) {
   ---
   
   ## **Tests**
+
+  This application has been tested in a countless number of different environments to ensure peak performance. However, bugs may exist, especially when used in combination with additional packages. Please be sure to test the application after an initial download. 
+  
+  To test run the code after installing on your local device, use the following code:` +
+		`\n` +
+		"```" +
+		data.tests +
+		"```" +
+		`
   
   ---
   
   ## **Questions**
+
+  The following questions exist on our end, and are currently trying to be solved:
+
+  ${data.questions}
   
   ---
   
   ## **Author**
+
+  Below is contact information for the author of this application. Please feel free to reach out directly if additional questions exist.
   
-  - ${data.author}
-  - ${data.email}
-  - ${data.linkedin}
+  - Name: ${data.author}
+  - Email: ${data.email}
+  - LinkedIn: ${data.linkedin}
+
+  ---
   
-  `;
+  ### Thank you for using ${data.title}!
+
+  `
+	);
 }
 
 module.exports = generateMarkdown;
