@@ -7,9 +7,6 @@ const util = require("util");
 // Promisify the writeFile function and store it within a variable called "writeFileAsync"
 const writeFileAsync = util.promisify(fs.writeFile);
 
-// Initialize the licenseBadge variable, which we will populate later with the getBadge function
-let licenseBadge;
-
 // array of questions for user
 function promptUser() {
 	return inquirer.prompt([
@@ -85,38 +82,12 @@ async function init() {
 		const data = await promptUser();
 		// store the dynamically-created markup in a variable called markup
 		const markup = generateMarkdown(data);
-		// Run the getBadge function to get the correct license badge
-		getBadge(data);
 		// write README file using the dynamically-created markup stored in the markup variable
 		await writeFileAsync("README.md", markup);
 	} catch (err) {
 		// if an error, log the error to the console
 		console.log(err);
 	}
-}
-
-// function to grab the correct badge for the selected license
-function getBadge(data) {
-	if (data.license === "MIT") {
-		licenseBadge =
-			"MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)";
-	} else if (data.license === "IPL 1.0") {
-		licenseBadge =
-			"IPL 1.0](https://img.shields.io/badge/License-IPL%201.0-blue.svg)](https://opensource.org/licenses/IPL-1.0)";
-	} else if (data.license === "MPL 2.0") {
-		licenseBadge =
-			"MPL 2.0](https://img.shields.io/badge/License-MPL%202.0-brightgreen.svg)](https://opensource.org/licenses/MPL-2.0)";
-	} else if (data.license === "ODbL") {
-		licenseBadge =
-			"ODbL](https://img.shields.io/badge/License-ODbL-brightgreen.svg)](https://opendatacommons.org/licenses/odbl/)";
-	} else if (data.license === "PDDL") {
-		licenseBadge =
-			"ODbL](https://img.shields.io/badge/License-PDDL-brightgreen.svg)](https://opendatacommons.org/licenses/pddl/)";
-	} else if (data.license === "Perl") {
-		licenseBadge =
-			"Artistic-2.0](https://img.shields.io/badge/License-Perl-0298c3.svg)](https://opensource.org/licenses/Artistic-2.0)";
-	}
-	return licenseBadge;
 }
 
 // function call to initialize program

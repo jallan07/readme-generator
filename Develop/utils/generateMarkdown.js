@@ -1,5 +1,28 @@
 // function to generate markdown for README
 function generateMarkdown(data) {
+	// Initialize the licenseBadge variable, and set it equal to an empty string
+	let licenseBadge = "";
+	// function to grab the correct badge for the selected license
+	if (data.license === "MIT") {
+		licenseBadge =
+			"MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)";
+	} else if (data.license === "IPL 1.0") {
+		licenseBadge =
+			"IPL 1.0](https://img.shields.io/badge/License-IPL%201.0-blue.svg)](https://opensource.org/licenses/IPL-1.0)";
+	} else if (data.license === "MPL 2.0") {
+		licenseBadge =
+			"MPL 2.0](https://img.shields.io/badge/License-MPL%202.0-brightgreen.svg)](https://opensource.org/licenses/MPL-2.0)";
+	} else if (data.license === "ODbL") {
+		licenseBadge =
+			"ODbL](https://img.shields.io/badge/License-ODbL-brightgreen.svg)](https://opendatacommons.org/licenses/odbl/)";
+	} else if (data.license === "PDDL") {
+		licenseBadge =
+			"ODbL](https://img.shields.io/badge/License-PDDL-brightgreen.svg)](https://opendatacommons.org/licenses/pddl/)";
+	} else if (data.license === "Perl") {
+		licenseBadge =
+			"Artistic-2.0](https://img.shields.io/badge/License-Perl-0298c3.svg)](https://opensource.org/licenses/Artistic-2.0)";
+	}
+
 	return `
   # **${data.title}**
 
