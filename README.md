@@ -17,6 +17,8 @@ This is a CLI application that runs using Node.js. It receives user input, and d
 5. [Tests](#Tests)
 6. [Questions](#Questions)
 7. [Author](#Author)
+8. [Screenshots](#Screenshots)
+9. [Video Walkthrough](#Video-Walkthrough)
 
 ---
 
