@@ -1,109 +1,99 @@
-# Unit 09 Node.js and ES6+ Homework: Good README Generator
+# **Readme Generator**
 
-When creating an open source project on GitHub, it is important to have a quality README with information about the app--what is the app for, how to use the app, how to install it, how to report issues, and how to make contributions so that other developers are more likely to use and contribute to the success of the project. A command-line application will allow for quick and easy generation of a project README to get started quickly. This will allow a project creator to spend more time working on finishing the project and less time creating a good README.
+---
 
-Your task is to create a command-line application that dynamically generates a professional README.md from a user's input using the [Inquirer package](https://www.npmjs.com/package/inquirer). Review the [Good README guide](../../01-HTML-Git-CSS/04-Supplemental/Good-README-Guide/README.md) as a reminder of everything that a quality, professional README contains. The application will be invoked with the following command:
+## **Description**
 
-```
-node index.js
-```
+This is a CLI application that runs using Node.js. It receives user input, and dynamically creates a readme file for a project after input is received.
 
-Because this is a command-line application that won’t be deployed, you’ll also need to provide a link to a walkthrough video that demonstrates the functionality of your application. Revisit the Screencastify Tutorial in the prework as a refresher on how to record video from your computer.
+---
 
-## User Story
+## **Table of Contents**
 
-```
-AS A developer
-I WANT a README generator
-SO THAT can quickly create a professional README for a new project
-```
+1. [Installation](#Installation)
+2. [Usage](#Usage)
+3. [License](#License)
+4. [Contributions](#Contributions)
+5. [Tests](#Tests)
+6. [Questions](#Questions)
+7. [Author](#Author)
 
-## Acceptance Criteria
+---
 
-```md
-GIVEN a command-line application that accepts user input
-WHEN I am prompted for information about my application repository
-THEN a quality, professional README.md is generated with the title of your project and sections entitled Description, Table of Contents, Installation, Usage, License, Contributing, Tests, and Questions
-WHEN I enter my project title
-THEN this is displayed as the title of the README
-WHEN I enter a description, installation instructions, usage information, contribution guidelines, and test instructions
-THEN this information is added to the sections of the README entitled Description, Installation, Usage, Contributing, and Tests
-WHEN I choose a license for my application from a list of options
-THEN a badge for that license is added hear the top of the README and a notice is added to the section of the README entitled License that explains which license the application is covered under
-WHEN I enter my GitHub username
-THEN this is added to the section of the README entitled Questions, with a link to my GitHub profile
-WHEN I enter my email address
-THEN this is added to the section of the README entitled Questions, with instructions on how to reach me with additional questions
-WHEN I click on the links in the Table of Contents
-THEN I am taken to the corresponding section of the README
-```
+## **Installation**
 
-## Minimum Application Requirements
+1. Clone the repo: `git clone https://github.com/jallan07/readme-generator.git`
+2. Install NPM packages: `npm i`
 
-- Meets [Submission Requirements](#submission-requirements) in the following section.
+   ***
 
-- Functional application.
+## **Usage**
 
-- GitHub repository with a unique name and a README describing project.
+N/A
 
-- The generated README includes the following sections:
+---
 
-  - Title
-  - Description
-  - Table of Contents
-  - Installation
-  - Usage
-  - License
-  - Contributing
-  - Tests
-  - Questions
+## **License**
 
-- The generated README includes 1 badge that's specific to the repository.
+Distributed under the MIT License.
 
-## Submission Requirements
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
-Because this is a CLI App, there will be no need to deploy it to Heroku. This time, though, you need to include a video showing us that you got the app working with no bugs. You should include a link to the video in your application's `README.md` file.
+---
 
-- Create a `.gitignore` file and include `node_modules/` and `.DS_Store/`.
+## **Contributions**
 
-- `node_modules` is not tracked and uploaded to GitHub. (Hint: It is easy if you create your `.gitignore` file before installing dependencies with npm.)
+**Current Contributors:**
 
-- Repo **MUST** include `package.json` with required dependencies. (Hint: Run `npm init` when you first setup the project before installing any dependencies.)
+_Josh Allan_
 
-- Include a video of the typical user flow through your application. This includes views of the prompts and the responses after their selection.
+Contributions are what make the open source community such an amazing place to be learn, inspire, and create. Any contributions you make are greatly appreciated.
 
-- Include any other screenshots you deem necessary to help someone who has never been introduced to your application understand the purpose and function of it. This is how you will communicate to potential employers/other developers in the future what you built and why, and to show how it works.
+1. Fork the Project
+2. Create your Feature Branch (git checkout -b feature/AmazingFeature)
+3. Commit your Changes (git commit -m 'Add some AmazingFeature')
+4. Push to the Branch (git push origin feature/AmazingFeature)
+5. Open a Pull Request
 
-- Because screenshots (and well-written READMEs) are extremely important in the context of GitHub, this will be part of the grading.
+   ***
 
-## Commit Early and Often
+## **Tests**
 
-One of the most important skills to master as a web developer is version control. Building the habit of committing via Git is important for two reasons:
+This application has been tested in a countless number of different environments to ensure peak performance. However, bugs may exist, especially when used in combination with additional packages. Please be sure to test the application after an initial download.
 
-- Your commit history is a signal to employers that you are actively working on projects and learning new skills.
+To test run the code after installing on your local device, use the following code:
+`N/A`
 
-- Your commit history allows you to revert your code base in the event that you need to return to a previous state.
+---
 
-Follow these guidelines for committing:
+## **Questions**
 
-- Make single-purpose commits for related changes to ensure a clean, manageable history. If you are fixing two issues, make two commits.
+The following questions exist on our end, and are currently trying to be solved:
 
-- Write descriptive, meaningful commit messages so that you and anyone else looking at your repository can easily understand its history.
+N/A
 
-- Don't commit half-done work, for the sake of your collaborators (and your future self!).
+---
 
-- Test your application before you commit to ensure functionality at every step in the development process.
+## **Author**
 
-We would like you to have more than 200 commits by graduation, so commit early and often!
+Below is contact information for the author of this application. Please feel free to reach out directly if additional questions exist.
 
-## Submission on BCS
+- Name: Josh Allan
+- Email: allan.josh07@gmail.com
+- LinkedIn: https://www.linkedin.com/in/joshuamallan/
 
-You are required to submit the following:
+---
 
-- A walkthrough video demonstrating the functionality of the application.
+## Screenshots
 
-- A sample README.md file for a project repository generated using your application.
+![User Input](img/user-input.png)
 
-- The URL of the GitHub repository. Give the repository a unique name and include a README describing the project.
+![Code Bas](img/code.png)
 
-# readme-generator
+## Video Walkthrough
+
+[View on YouTube](https://youtu.be/gFjcB6YNCBo)
+
+---
+
+### Thank you for using Readme Generator!
